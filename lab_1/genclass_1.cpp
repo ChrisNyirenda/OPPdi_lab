@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-#include <vector>
-using namespace std;
 
+using namespace std;
+//set/get method lab1 
 class Protein {
 private:
     string id; 
@@ -16,7 +16,6 @@ public:
     string getId() const { return id; }
     string getName() const { return name; }
     string describe() const { return "protein " + name + " " + sequence; }
-    Protein(string id, string name, string sequence){setId(id); setName(name); setSequence(sequence);};
 }; 
 
 class Gene {
@@ -35,14 +34,7 @@ public:
     void setStart(int Newstart) { start = Newstart; }
     void setEnd(int Newend) { end = Newend; }
     void setStrand(char Newstrand) { strand = Newstrand; }
-    Gene(string id, string name, string chrom, int start,  int end, char strand) {
-        setId(id);
-        setName(name);
-        setChrom(chrom);
-        setStart(start);
-        setEnd(end);
-        setStrand(strand);
-    }
+
     string describe() const {
         return "Gene " + name + " (" + chrom + ":" + to_string(start) + "-" + to_string(end) + "," + strand + ")";
     }
@@ -69,15 +61,10 @@ int main() {
     obj2.setEnd(43170245);
     obj2.setStrand('+');
      // Output
-   // cout << obj1.describe() << endl;
-    //cout << obj2.describe() << endl;
+    cout << obj1.describe() << endl;
+    cout << obj2.describe() << endl;
 
 
-    // constractor method. 
-
-
-    Protein probj1("ESP4321" ,"PTEN" , "WPOITITITI" ) ; 
-    cout<< probj1.id << " " << probj1.name << " " << probj1.sequence ;
 
     return 0;
 }

@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 using namespace std;
-
+//constractor/destructor method lab2
 class Protein {
 private:
     string id; 
